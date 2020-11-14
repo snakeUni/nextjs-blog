@@ -3,13 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "lint": "prettier --write '**/*.js'",
+    "dev": "next-remote-watch posts",
+    "build": "yarn rss && next build",
+    "rss": "node lib/rss"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
+    "intersection-observer": "^0.11.0",
+    "lodash.debounce": "^4.0.8",
     "next": "10.0.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "nprogress": "^0.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "swr": "^0.3.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "gray-matter": "^4.0.2",
+    "marked": "^1.2.3",
+    "next-remote-watch": "^0.2.0",
+    "prettier": "^2.1.2",
+    "prism-react-renderer": "^1.1.1",
+    "rss": "^1.2.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
